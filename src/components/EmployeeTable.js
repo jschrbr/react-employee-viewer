@@ -6,17 +6,13 @@ import tableIcons from "../utils/tableIcons";
 
 import "../App.css";
 
-function EmplyeeCard() {
-  const [state, setState] = React.useState({
-    columns: tableColumns,
-    data: employeeData,
-  });
+function EmployeeTable() {
   return (
     <div className="table">
       <MaterialTable
         title="Employee table"
-        columns={state.columns}
-        data={state.data}
+        columns={tableColumns}
+        data={employeeData}
         icons={tableIcons}
         options={{
           filtering: true,
@@ -28,4 +24,4 @@ function EmplyeeCard() {
   );
 }
 
-export default EmplyeeCard;
+export default EmployeeTable;
